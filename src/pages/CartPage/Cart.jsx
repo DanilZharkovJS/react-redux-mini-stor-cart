@@ -11,7 +11,7 @@ function Cart() {
   const products = useSelector(selectProducts)
 
   const filteredProducts = products.filter((product) => product.isAddedToCart)
-  const totalPrice = filteredProducts.reduce((sum, p) => sum + p.price, 0)
+  const totalPrice = filteredProducts.reduce((sum, p) => sum + p.price, 0) 
 
   const handleDeleteCart = (id) => {
     dispatch(toggleCart(id))

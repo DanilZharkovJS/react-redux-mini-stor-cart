@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <div className='app-container'>
       <Home />
-      <Cart />
+      <Cart /> 
       </div>
       
     </div>

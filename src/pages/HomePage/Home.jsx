@@ -7,7 +7,7 @@ function Home() {
   const products = useSelector(selectProducts)
 
   const handleAddCart = (id) => {
-    dispatch(toggleCart(id))
+    dispatch(toggleCart(id)) 
   }
 
   return (
