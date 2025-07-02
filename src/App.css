@@ -84,3 +84,26 @@ body {
   font-style: italic;
   color: gray;
 }
+.nav-bar {
+  background-color: #aed5ff;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.nav-bar a {
+  color: rgb(74, 69, 69);
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 10px;
+  transition: color 200ms;
+}
+
+.nav-bar a:hover {
+  color: #9c8306;
+}
+.nav-link.active {
+   color: #9c8306;
+}
+
