@@ -1,18 +1,31 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { selectProducts, toggleCart } from '../../redux/slices/productsSlice'
-import { selectSearchQuery, selectSortBy, setSortBy } from '../../redux/slices/filterSlice'
+import {
+  selectSearchQuery,
+  selectSortBy,
+  setSearchQuery,
+  setSortBy,
+} from '../../redux/slices/filterSlice'
 
 function Home() {
   const dispatch = useDispatch()
   const products = useSelector(selectProducts)
   const sortBy = useSelector(selectSortBy)
+  const searchQuery = useSelector(selectSearchQuery)
 
-  const sortedProducts = [...products].sort((a, b) => {
-    if (sortBy === 'price_asc') return a.price - b.price
-    if (sortBy === 'price_desc') return b.price - a.price
-    if (sortBy === 'alphabetical') return a.name.localeCompare(b.name)
-    return 0
-  })
+  const sortedAndFilteredProducts = [...products]
+    .filter((product) => {
+      const query = searchQuery.toLowerCase()
+      const nameMatch = product.name.toLowerCase().includes(query)
+      const priceMatch = product.price.toString().includes(query)
+      return nameMatch || priceMatch
+    })
+    .sort((a, b) => {
+      if (sortBy === 'price_asc') return a.price - b.price
+      if (sortBy === 'price_desc') return b.price - a.price
+      if (sortBy === 'alphabetical') return a.name.localeCompare(b.name)
+      return 0
+    })
 
   const handleAddCart = (id) => {
     dispatch(toggleCart(id))
@@ -20,11 +33,22 @@ function Home() {
   const handleSortChange = (e) => {
     dispatch(setSortBy(e.target.value))
   }
+  const handleSearchChange = (e) => {
+    dispatch(setSearchQuery(e.target.value))
+  }
 
-  
   return (
     <div className="home">
       <h1 className="title">Home</h1>
+      <div className="search-wrapper">
+        <input
+          type="text"
+          placeholder="Search by name or price..."
+          value={searchQuery}
+          onChange={handleSearchChange}
+          className="search-input"
+        />
+      </div>
       <div className="sort-wrapper">
         <label htmlFor="sort-select" className="sort-label">
           Sort by:
@@ -42,7 +66,7 @@ function Home() {
         </select>
       </div>
       <div className="product-list">
-        {sortedProducts.map((product) => (
+        {sortedAndFilteredProducts.map((product) => (
           <div className="product-card" key={product.id}>
             <h2 className="product-name">{product.name}</h2>
             <p className="product-price">{product.price} $</p>
