@@ -103,20 +103,26 @@ function Home() {
           </button>
         </div>
       </div>
-      <div className="product-list">
-        {sortedAndFilteredProducts.map((product) => (
-          <div className="product-card" key={product.id}>
-            <h2 className="product-name">{product.name}</h2>
-            <p className="product-price">{product.price} $</p>
-            <button
-              className={`add-btn ${product.isAddedToCart ? 'disabled' : ''}`}
-              onClick={() => handleAddCart(product.id)}
-              disabled={product.isAddedToCart}
-            >
-              {product.isAddedToCart ? 'In Cart' : 'Add to Cart'}
-            </button>
-          </div>
-        ))}
+      <div className="product-list-wrapper">
+        <div className="product-list">
+          {sortedAndFilteredProducts.map((product) => (
+            <div className="product-card-container" key={product.id}>
+              <div className="product-card">
+                <h2 className="product-name">{product.name}</h2>
+                <p className="product-price">{product.price} $</p>
+                <button
+                  className={`add-btn ${
+                    product.isAddedToCart ? 'disabled' : ''
+                  }`}
+                  onClick={() => handleAddCart(product.id)}
+                  disabled={product.isAddedToCart}
+                >
+                  {product.isAddedToCart ? 'In Cart' : 'Add to Cart'}
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )

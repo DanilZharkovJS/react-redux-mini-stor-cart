@@ -3,6 +3,7 @@ import Home from './pages/HomePage/Home'
 import Cart from './pages/CartPage/Cart'
 import './App.css'
 import CartSaver from './pages/CartPage/CartSaver'
+import {ToastContainer } from 'react-toastify'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
       </Routes>
       <CartSaver />
+      <ToastContainer position="bottom-right" autoClose={2000} />
     </div>
   )
 }
