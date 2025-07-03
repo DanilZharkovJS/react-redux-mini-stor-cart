@@ -285,7 +285,12 @@ body {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   transform: translateY(-4px);
 }
-
+.product-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 3px;
+}
 @media (max-width: 600px) {
   body {
     padding: 1rem;
@@ -315,7 +320,7 @@ body {
   .del-all-btn {
     width: 100%;
     margin-left: 0;
-    padding: 0.8rem 0;
+    
   }
 
   .pay-btn {
