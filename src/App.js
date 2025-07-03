@@ -2,6 +2,7 @@ import { Routes, Route, NavLink } from 'react-router-dom'
 import Home from './pages/HomePage/Home'
 import Cart from './pages/CartPage/Cart'
 import './App.css'
+import CartSaver from './pages/CartPage/CartSaver'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
+      <CartSaver />
     </div>
   )
 }
