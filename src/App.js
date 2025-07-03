@@ -7,7 +7,13 @@ function App() {
   return (
     <div>
       <nav className="nav-bar">
-        <NavLink to="/" className={'nav-link'}>Home</NavLink> | <NavLink to="/cart" className={'nav-link'}>Cart</NavLink>
+        <NavLink to="/" className={'nav-link'}>
+          Home
+        </NavLink>{' '}
+        |{' '}
+        <NavLink to="/cart" className={'nav-link'}>
+          Cart
+        </NavLink>
       </nav>
 
       <Routes>

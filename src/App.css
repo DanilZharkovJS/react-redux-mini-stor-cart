@@ -106,4 +106,33 @@ body {
 .nav-link.active {
    color: #9c8306;
 }
+.sort-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.sort-label {
+  font-weight: 500;
+  font-size: 16px;
+  color: #333;
+}
+
+.sort-select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: border 0.2s ease;
+}
+
+.sort-select:focus {
+  outline: none;
+  border-color: #0077ff;
+  background-color: #fff;
+}
+
 
