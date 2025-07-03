@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import initialProducts from '../data/initialProducts' 
+import initialProducts from '../data/initialProducts'
 
 const savedProducts = JSON.parse(localStorage.getItem('cartProducts'))
 

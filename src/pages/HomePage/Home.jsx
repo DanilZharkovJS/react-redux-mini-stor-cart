@@ -2,8 +2,10 @@ import { useSelector, useDispatch } from 'react-redux'
 import { selectProducts, toggleCart } from '../../redux/slices/productsSlice'
 import {
   selectSearchQuery,
+  selectSelectedCategory,
   selectSortBy,
   setSearchQuery,
+  setSelectedCategory,
   setSortBy,
 } from '../../redux/slices/filterSlice'
 
@@ -12,8 +14,13 @@ function Home() {
   const products = useSelector(selectProducts)
   const sortBy = useSelector(selectSortBy)
   const searchQuery = useSelector(selectSearchQuery)
+  const selectedCategory = useSelector(selectSelectedCategory)
 
   const sortedAndFilteredProducts = [...products]
+    .filter((product) => {
+      if (selectedCategory === 'All') return true
+      return product.category === selectedCategory
+    })
     .filter((product) => {
       const query = searchQuery.toLowerCase()
       const nameMatch = product.name.toLowerCase().includes(query)
@@ -36,6 +43,9 @@ function Home() {
   const handleSearchChange = (e) => {
     dispatch(setSearchQuery(e.target.value))
   }
+  const handleCategoryFilterChange = (e) => {
+    dispatch(setSelectedCategory(e.target.value))
+  }
 
   return (
     <div className="home">
@@ -48,6 +58,23 @@ function Home() {
           onChange={handleSearchChange}
           className="search-input"
         />
+      </div>
+      <div className="category-wrapper">
+        <label htmlFor="category-select" className="category-label">
+          Filter by category:
+        </label>
+        <select
+          id="category-select"
+          className="category-select"
+          value={selectedCategory}
+          onChange={handleCategoryFilterChange}
+        >
+          <option value="All">All</option>
+          <option value="Clothes">Clothes</option>
+          <option value="Shoes">Shoes</option>
+          <option value="Accessories">Accessories</option>
+          <option value="Outerwear">Outerwear</option>
+        </select>
       </div>
       <div className="sort-wrapper">
         <label htmlFor="sort-select" className="sort-label">
