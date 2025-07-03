@@ -19,10 +19,18 @@ const filterSlice = createSlice({
     setSelectedCategory: (state, action) => {
       state.category = action.payload
     },
+    setClearAllFilters: () => {
+      return initialState
+    },
   },
 })
 
-export const { setSortBy, setSearchQuery, setSelectedCategory } = filterSlice.actions
+export const {
+  setSortBy,
+  setSearchQuery,
+  setSelectedCategory,
+  setClearAllFilters,
+} = filterSlice.actions
 export const selectSortBy = (state) => state.filters.sortBy
 export const selectSearchQuery = (state) => state.filters.searchQuery
 export const selectSelectedCategory = (state) => state.filters.category

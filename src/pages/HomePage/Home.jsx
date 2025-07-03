@@ -4,6 +4,7 @@ import {
   selectSearchQuery,
   selectSelectedCategory,
   selectSortBy,
+  setClearAllFilters,
   setSearchQuery,
   setSelectedCategory,
   setSortBy,
@@ -46,6 +47,9 @@ function Home() {
   const handleCategoryFilterChange = (e) => {
     dispatch(setSelectedCategory(e.target.value))
   }
+  const handleClearAllFilters = () => {
+    dispatch(setClearAllFilters())
+  }
 
   return (
     <div className="home">
@@ -59,38 +63,45 @@ function Home() {
           className="search-input"
         />
       </div>
-      <div className="category-wrapper">
-        <label htmlFor="category-select" className="category-label">
-          Filter by category:
-        </label>
-        <select
-          id="category-select"
-          className="category-select"
-          value={selectedCategory}
-          onChange={handleCategoryFilterChange}
-        >
-          <option value="All">All</option>
-          <option value="Clothes">Clothes</option>
-          <option value="Shoes">Shoes</option>
-          <option value="Accessories">Accessories</option>
-          <option value="Outerwear">Outerwear</option>
-        </select>
-      </div>
-      <div className="sort-wrapper">
-        <label htmlFor="sort-select" className="sort-label">
-          Sort by:
-        </label>
-        <select
-          id="sort-select"
-          className="sort-select"
-          onChange={handleSortChange}
-          value={sortBy}
-        >
-          <option value="default">Default</option>
-          <option value="price_asc">Price ↑</option>
-          <option value="price_desc">Price ↓</option>
-          <option value="alphabetical">A-Z</option>
-        </select>
+      <div className="filters-row">
+        <div className="category-wrapper">
+          <label htmlFor="category-select" className="category-label">
+            Filter by category:
+          </label>
+          <select
+            id="category-select"
+            className="category-select"
+            value={selectedCategory}
+            onChange={handleCategoryFilterChange}
+          >
+            <option value="All">All</option>
+            <option value="Clothes">Clothes</option>
+            <option value="Shoes">Shoes</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Outerwear">Outerwear</option>
+          </select>
+        </div>
+        <div className="sort-wrapper">
+          <label htmlFor="sort-select" className="sort-label">
+            Sort by:
+          </label>
+          <select
+            id="sort-select"
+            className="sort-select"
+            onChange={handleSortChange}
+            value={sortBy}
+          >
+            <option value="default">Default</option>
+            <option value="price_asc">Price ↑</option>
+            <option value="price_desc">Price ↓</option>
+            <option value="alphabetical">A-Z</option>
+          </select>
+        </div>
+        <div className="filters-reset-wrapper">
+          <button className="reset-filters-btn" onClick={handleClearAllFilters}>
+            Clear Filters
+          </button>
+        </div>
       </div>
       <div className="product-list">
         {sortedAndFilteredProducts.map((product) => (
