@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-redux-mini-stor-cart/static/css/main.63fde2b1.css",
-    "main.js": "/react-redux-mini-stor-cart/static/js/main.2b2ce930.js",
+    "main.js": "/react-redux-mini-stor-cart/static/js/main.62e37280.js",
     "index.html": "/react-redux-mini-stor-cart/index.html",
     "main.63fde2b1.css.map": "/react-redux-mini-stor-cart/static/css/main.63fde2b1.css.map",
-    "main.2b2ce930.js.map": "/react-redux-mini-stor-cart/static/js/main.2b2ce930.js.map"
+    "main.62e37280.js.map": "/react-redux-mini-stor-cart/static/js/main.62e37280.js.map"
   },
   "entrypoints": [
     "static/css/main.63fde2b1.css",
-    "static/js/main.2b2ce930.js"
+    "static/js/main.62e37280.js"
   ]
 }
