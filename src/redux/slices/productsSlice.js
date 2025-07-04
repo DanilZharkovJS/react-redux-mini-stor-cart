@@ -3,8 +3,14 @@ import initialProducts from '../data/initialProducts'
 
 const savedProducts = JSON.parse(localStorage.getItem('cartProducts'))
 
+const isValidSaved =
+  Array.isArray(savedProducts) &&
+  savedProducts.every(
+    (p) => p.category && p.name && typeof p.price === 'number'
+  )
+
 const initialState = {
-  products: savedProducts || initialProducts,
+  products: isValidSaved ? savedProducts : initialProducts,
 }
 
 const productsSlice = createSlice({

@@ -9,9 +9,12 @@ import {
   setSelectedCategory,
   setSortBy,
 } from '../../redux/slices/filterSlice'
+import { useState } from 'react'
+import ProductModal from './ProductModal'
 
 function Home() {
   const dispatch = useDispatch()
+  const [selectedProduct, setSelectedProduct] = useState(null)
   const products = useSelector(selectProducts)
   const sortBy = useSelector(selectSortBy)
   const searchQuery = useSelector(selectSearchQuery)
@@ -49,6 +52,9 @@ function Home() {
   }
   const handleClearAllFilters = () => {
     dispatch(setClearAllFilters())
+  }
+  const handleCardClick = (product) => {
+    setSelectedProduct(product)
   }
 
   return (
@@ -107,7 +113,10 @@ function Home() {
         <div className="product-list">
           {sortedAndFilteredProducts.map((product) => (
             <div className="product-card-container" key={product.id}>
-              <div className="product-card">
+              <div
+                className="product-card"
+                onClick={() => handleCardClick(product)}
+              >
                 <h2 className="product-name">{product.name}</h2>
                 <p className="product-price">{product.price} $</p>
                 <button
@@ -124,6 +133,12 @@ function Home() {
           ))}
         </div>
       </div>
+      {selectedProduct && (
+        <ProductModal
+          product={selectedProduct}
+          onClose={() => setSelectedProduct(null)}
+        />
+      )}
     </div>
   )
 }

@@ -7,6 +7,7 @@ export const initialProducts = [
     price: 25,
     isAddedToCart: false,
     category: 'Clothes',
+    description: 'Classic cotton t-shirt for everyday wear.'
   },
   {
     id: uuid(),
@@ -14,6 +15,7 @@ export const initialProducts = [
     price: 90,
     isAddedToCart: false,
     category: 'Shoes',
+    description: 'Comfortable sneakers for casual and sports use.'
   },
   {
     id: uuid(),
@@ -21,6 +23,7 @@ export const initialProducts = [
     price: 55,
     isAddedToCart: false,
     category: 'Accessories',
+    description: 'Spacious and durable backpack for daily use.'
   },
   {
     id: uuid(),
@@ -28,6 +31,7 @@ export const initialProducts = [
     price: 15,
     isAddedToCart: false,
     category: 'Accessories',
+    description: 'Stylish baseball cap with adjustable strap.'
   },
   {
     id: uuid(),
@@ -35,6 +39,7 @@ export const initialProducts = [
     price: 35,
     isAddedToCart: false,
     category: 'Accessories',
+    description: 'UV-protected sunglasses with modern design.'
   },
   {
     id: uuid(),
@@ -42,6 +47,7 @@ export const initialProducts = [
     price: 50,
     isAddedToCart: false,
     category: 'Clothes',
+    description: 'Classic denim jeans with slim fit.'
   },
   {
     id: uuid(),
@@ -49,6 +55,7 @@ export const initialProducts = [
     price: 120,
     isAddedToCart: false,
     category: 'Outerwear',
+    description: 'Warm and waterproof jacket for cold weather.'
   },
   {
     id: uuid(),
@@ -56,6 +63,7 @@ export const initialProducts = [
     price: 150,
     isAddedToCart: false,
     category: 'Accessories',
+    description: 'Elegant wristwatch with leather strap.'
   },
   {
     id: uuid(),
@@ -63,6 +71,7 @@ export const initialProducts = [
     price: 20,
     isAddedToCart: false,
     category: 'Accessories',
+    description: 'Leather belt with metal buckle.'
   },
   {
     id: uuid(),
@@ -70,6 +79,7 @@ export const initialProducts = [
     price: 18,
     isAddedToCart: false,
     category: 'Accessories',
+    description: 'Soft wool scarf for winter.'
   },
   {
     id: uuid(),
@@ -77,6 +87,7 @@ export const initialProducts = [
     price: 22,
     isAddedToCart: false,
     category: 'Accessories',
+    description: 'Warm gloves with touchscreen support.'
   },
   {
     id: uuid(),
@@ -84,6 +95,7 @@ export const initialProducts = [
     price: 45,
     isAddedToCart: false,
     category: 'Clothes',
+    description: 'Comfortable hoodie with front pocket.'
   },
   {
     id: uuid(),
@@ -91,6 +103,7 @@ export const initialProducts = [
     price: 30,
     isAddedToCart: false,
     category: 'Clothes',
+    description: 'Lightweight shorts for summer.'
   },
   {
     id: uuid(),
@@ -98,6 +111,7 @@ export const initialProducts = [
     price: 40,
     isAddedToCart: false,
     category: 'Shoes',
+    description: 'Open-toe sandals perfect for the beach.'
   },
   {
     id: uuid(),
@@ -105,6 +119,7 @@ export const initialProducts = [
     price: 95,
     isAddedToCart: false,
     category: 'Shoes',
+    description: 'Durable boots for hiking and outdoor.'
   },
   {
     id: uuid(),
@@ -112,6 +127,7 @@ export const initialProducts = [
     price: 28,
     isAddedToCart: false,
     category: 'Accessories',
+    description: 'Compact wallet made of genuine leather.'
   },
   {
     id: uuid(),
@@ -119,6 +135,7 @@ export const initialProducts = [
     price: 10,
     isAddedToCart: false,
     category: 'Clothes',
+    description: 'Soft cotton socks, pack of three.'
   },
   {
     id: uuid(),
@@ -126,6 +143,7 @@ export const initialProducts = [
     price: 200,
     isAddedToCart: false,
     category: 'Clothes',
+    description: 'Formal suit perfect for business events.'
   },
   {
     id: uuid(),
@@ -133,6 +151,7 @@ export const initialProducts = [
     price: 110,
     isAddedToCart: false,
     category: 'Clothes',
+    description: 'Stylish blazer for formal occasions.'
   },
   {
     id: uuid(),
@@ -140,6 +159,7 @@ export const initialProducts = [
     price: 17,
     isAddedToCart: false,
     category: 'Accessories',
+    description: 'Silk tie with classic pattern.'
   },
   {
     id: uuid(),
@@ -147,6 +167,7 @@ export const initialProducts = [
     price: 35,
     isAddedToCart: false,
     category: 'Clothes',
+    description: 'Button-up shirt made from breathable fabric.'
   },
   {
     id: uuid(),
@@ -154,6 +175,7 @@ export const initialProducts = [
     price: 20,
     isAddedToCart: false,
     category: 'Clothes',
+    description: 'Sleeveless tank top for hot days.'
   },
   {
     id: uuid(),
@@ -161,6 +183,7 @@ export const initialProducts = [
     price: 40,
     isAddedToCart: false,
     category: 'Clothes',
+    description: 'Cozy sweatpants for lounging or workouts.'
   },
   {
     id: uuid(),
@@ -168,6 +191,7 @@ export const initialProducts = [
     price: 32,
     isAddedToCart: false,
     category: 'Clothes',
+    description: 'Stretchy leggings for everyday comfort.'
   },
   {
     id: uuid(),
@@ -175,6 +199,7 @@ export const initialProducts = [
     price: 70,
     isAddedToCart: false,
     category: 'Clothes',
+    description: 'Elegant dress for special occasions.'
   },
   {
     id: uuid(),
@@ -182,6 +207,7 @@ export const initialProducts = [
     price: 38,
     isAddedToCart: false,
     category: 'Clothes',
+    description: 'Flowy skirt with floral design.'
   },
   {
     id: uuid(),
@@ -189,6 +215,7 @@ export const initialProducts = [
     price: 85,
     isAddedToCart: false,
     category: 'Shoes',
+    description: 'High-heel shoes for evening wear.'
   },
   {
     id: uuid(),
@@ -196,6 +223,7 @@ export const initialProducts = [
     price: 75,
     isAddedToCart: false,
     category: 'Shoes',
+    description: 'Comfortable loafers for daily wear.'
   },
   {
     id: uuid(),
@@ -203,6 +231,7 @@ export const initialProducts = [
     price: 12,
     isAddedToCart: false,
     category: 'Shoes',
+    description: 'Rubber flip flops for casual use.'
   },
   {
     id: uuid(),
@@ -210,6 +239,7 @@ export const initialProducts = [
     price: 48,
     isAddedToCart: false,
     category: 'Clothes',
+    description: 'Soft knit cardigan with buttons.'
   },
   {
     id: uuid(),
@@ -217,6 +247,7 @@ export const initialProducts = [
     price: 65,
     isAddedToCart: false,
     category: 'Outerwear',
+    description: 'Water-resistant raincoat with hood.'
   },
   {
     id: uuid(),
@@ -224,6 +255,7 @@ export const initialProducts = [
     price: 80,
     isAddedToCart: false,
     category: 'Clothes',
+    description: 'Matching tracksuit set for workouts.'
   },
   {
     id: uuid(),
@@ -231,6 +263,7 @@ export const initialProducts = [
     price: 42,
     isAddedToCart: false,
     category: 'Outerwear',
+    description: 'Colorful poncho made of warm wool.'
   },
   {
     id: uuid(),
@@ -238,6 +271,7 @@ export const initialProducts = [
     price: 14,
     isAddedToCart: false,
     category: 'Accessories',
+    description: 'Classic French beret made of wool.'
   },
   {
     id: uuid(),
@@ -245,6 +279,7 @@ export const initialProducts = [
     price: 25,
     isAddedToCart: false,
     category: 'Accessories',
+    description: 'Silver bracelet with charm.'
   },
   {
     id: uuid(),
@@ -252,6 +287,7 @@ export const initialProducts = [
     price: 60,
     isAddedToCart: false,
     category: 'Accessories',
+    description: 'Elegant necklace with pendant.'
   },
   {
     id: uuid(),
@@ -259,6 +295,7 @@ export const initialProducts = [
     price: 30,
     isAddedToCart: false,
     category: 'Accessories',
+    description: 'Set of earrings with crystals.'
   },
   {
     id: uuid(),
@@ -266,6 +303,7 @@ export const initialProducts = [
     price: 45,
     isAddedToCart: false,
     category: 'Accessories',
+    description: 'Stylish ring with gemstone.'
   },
   {
     id: uuid(),
@@ -273,6 +311,7 @@ export const initialProducts = [
     price: 33,
     isAddedToCart: false,
     category: 'Clothes',
+    description: 'Cotton polo shirt with collar.'
   },
   {
     id: uuid(),
@@ -280,6 +319,7 @@ export const initialProducts = [
     price: 36,
     isAddedToCart: false,
     category: 'Clothes',
+    description: 'One-piece swimsuit with open back.'
   },
   {
     id: uuid(),
@@ -287,6 +327,7 @@ export const initialProducts = [
     price: 58,
     isAddedToCart: false,
     category: 'Clothes',
+    description: 'Denim overalls with pockets.'
   },
   {
     id: uuid(),
@@ -294,6 +335,7 @@ export const initialProducts = [
     price: 90,
     isAddedToCart: false,
     category: 'Clothes',
+    description: 'Traditional Japanese kimono with patterns.'
   },
   {
     id: uuid(),
@@ -301,6 +343,7 @@ export const initialProducts = [
     price: 130,
     isAddedToCart: false,
     category: 'Outerwear',
+    description: 'Insulated parka for extreme cold.'
   },
   {
     id: uuid(),
@@ -308,6 +351,7 @@ export const initialProducts = [
     price: 20,
     isAddedToCart: false,
     category: 'Shoes',
+    description: 'Soft indoor slippers with lining.'
   },
   {
     id: uuid(),
@@ -315,6 +359,7 @@ export const initialProducts = [
     price: 24,
     isAddedToCart: false,
     category: 'Clothes',
+    description: 'Trendy crop top with short sleeves.'
   },
   {
     id: uuid(),
@@ -322,6 +367,7 @@ export const initialProducts = [
     price: 39,
     isAddedToCart: false,
     category: 'Clothes',
+    description: 'Lightweight blouse for everyday wear.'
   },
   {
     id: uuid(),
@@ -329,6 +375,7 @@ export const initialProducts = [
     price: 34,
     isAddedToCart: false,
     category: 'Clothes',
+    description: 'Sleeveless vest for layering.'
   },
   {
     id: uuid(),
@@ -336,6 +383,7 @@ export const initialProducts = [
     price: 46,
     isAddedToCart: false,
     category: 'Clothes',
+    description: 'Warm turtleneck with stretch fabric.'
   },
   {
     id: uuid(),
@@ -343,6 +391,7 @@ export const initialProducts = [
     price: 52,
     isAddedToCart: false,
     category: 'Shoes',
+    description: 'Rubber rain boots for wet conditions.'
   },
   {
     id: uuid(),
@@ -350,6 +399,7 @@ export const initialProducts = [
     price: 44,
     isAddedToCart: false,
     category: 'Clothes',
+    description: 'Casual cargo pants with multiple pockets.'
   },
 ]
 

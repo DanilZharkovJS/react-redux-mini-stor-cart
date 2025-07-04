@@ -291,6 +291,72 @@ body {
   text-align: center;
   gap: 3px;
 }
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.modal-category {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.modal-description {
+  font-size: 1rem;
+  margin: 1rem 0;
+  color: #444;
+}
+
+.modal-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  color: #007bff;
+}
+
+.close-btn {
+  background-color: #ff5252;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.close-btn:hover {
+  background-color: #d43636;
+}
+
 @media (max-width: 600px) {
   body {
     padding: 1rem;
