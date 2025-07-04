@@ -113,11 +113,13 @@ function Home() {
         <div className="product-list">
           {sortedAndFilteredProducts.map((product) => (
             <div className="product-card-container" key={product.id}>
-              <div
-                className="product-card"
-                onClick={() => handleCardClick(product)}
-              >
-                <h2 className="product-name">{product.name}</h2>
+              <div className="product-card">
+                <h2
+                  className="product-name"
+                  onClick={() => handleCardClick(product)}
+                >
+                  {product.name}
+                </h2>
                 <p className="product-price">{product.price} $</p>
                 <button
                   className={`add-btn ${
@@ -135,8 +137,9 @@ function Home() {
       </div>
       {selectedProduct && (
         <ProductModal
-          product={selectedProduct}
+          productId={selectedProduct?.id}
           onClose={() => setSelectedProduct(null)}
+          handleCart={handleAddCart}
         />
       )}
     </div>
